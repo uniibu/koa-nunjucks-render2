@@ -22,5 +22,8 @@
   "homepage": "https://github.com/uniibu/koa-nunjucks-render2#readme",
   "dependencies": {
     "nunjucks": "^3.0.0"
+  },
+  "engines": {
+    "node": "7.8.0"
   }
 }
