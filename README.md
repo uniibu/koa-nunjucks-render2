@@ -1,7 +1,9 @@
-koa-nunjucks-render
+koa-nunjucks-render2
 ------------
+[![Node version](https://img.shields.io/node/v/koa-nunjucks-render2.svg?style=flat)](http://nodejs.org/download/)
+[![Koajs deps](https://img.shields.io/badge/Koajs-2.2.0-brightgreen.svg)](https://github.com/koajs/koa)
 
-![NPM version](https://badge.fury.io/js/koa-nunjucks-render.svg)
+** Updated fork of koa-nunjucks-render https://github.com/ohomer/koa-nunjucks-render for use with latest Koajs@2.x.x and Nodejs 7.x.x
 
 Fast koa middleware for using nunjucks, that allows you to easily and efficiently render nunjucks templates.
 
@@ -19,7 +21,7 @@ If you're using nunjucks with koa, you'll find a few notable improvements over k
 Install
 =======
 
-    npm install --save koa-nunjucks-render
+    npm install --save koa-nunjucks-render2
 
 
 Example usage:
@@ -55,8 +57,8 @@ It adds the additional (onptioanl) configurations:
 
 And using it is also very clean:
 
-      app.use(function*() {
-        yield this.render('template', {
+      app.use(async ctx => {
+        await ctx.render('template', {
              message: 'Hello World!',
              engine: 'Thomas The Tank'
              helicopter: true
