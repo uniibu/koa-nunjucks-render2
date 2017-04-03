@@ -11,7 +11,7 @@ module.exports = function(path, opts) {
 
   const filters = opts.filters || {};
   Object.keys(filters).forEach(f => {
-    env.addFilter(f, globals[f]);
+    env.addFilter(f, filters[f]);
   });
 
   const globals = opts.globals || {};
@@ -21,7 +21,7 @@ module.exports = function(path, opts) {
 
   const extensions = opts.extensions || {};
   Object.keys(extensions).forEach(e => {
-    env.addExtension(e, globals[e]);
+    env.addExtension(e, extensions[e]);
   });
 
   return (ctx, next) => {
